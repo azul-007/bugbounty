@@ -50,3 +50,13 @@ users to define a URL to redirect to.
 
 When you're searching for open redirect vulns, you'll be monitoring your proxy history for a GET request sent to the site you're testing that includes a 
 paramets specifying a URL redirect.
+
+If you can only control a portion of the final URL used by a site, adding special URL characters might change the meaning of the URL and redirect a user
+to another domain. If you can only control the *checkout_url* param value, and you notice that the parameter is being combined with a hardcoded URL on the 
+backened of the site, such as http://mystore.myshopify.com. Try adding special URL charactesr, like a period or @ symbole to test whether you can control
+the redirected location.
+
+**Look at the .attacker.com portion**
+``` HTML
+http://mystore.myshopify.com/account/login?checkout_url=.attacker.com
+```
