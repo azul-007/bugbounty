@@ -18,6 +18,7 @@ When looking for these vulnerabilities, keep an eye out for URL parameters that 
 - *url=*
 - *redirect=*
 - *next=*
+- *domain_name=*
 
 Redirect parameters might not always be obvious, they will vary from site to site. Parameters might be labeled with just single characters
 such as r= or u=.
